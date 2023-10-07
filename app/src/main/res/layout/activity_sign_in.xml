@@ -7,6 +7,33 @@
     android:background="@drawable/signin_screen"
     tools:context=".SignInActivity">
 
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="143dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_rakamin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Rakamin Perbankan"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
 
     <TextView
         android:id="@+id/textView"
@@ -79,13 +106,13 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
+        android:fontFamily="@font/montserrat_bold"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:background="@drawable/rounded_button"
         android:text="Masuk"
         android:textColor="@color/white"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -93,10 +120,11 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="16dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button">
@@ -105,17 +133,70 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
             android:text="Belum Punya Akun? "
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
             android:text="Register!"
             android:textColor="@color/dark_blue"
-            android:textStyle="bold"/>/>
+            android:textStyle="bold" />/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textTOS1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Saya menyetujui "
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textTOS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="syarat dan ketentuan pengguna!"
+        android:textColor="@color/dark_blue"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textTOS1"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        style="@android:style/Widget.CompoundButton.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/dark_blue"
+        android:checked="false"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Ingat Saya"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLayout"
+        tools:layout_editor_absoluteX="43dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
