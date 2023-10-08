@@ -38,19 +38,19 @@ class SignUpActivity : AppCompatActivity() {
             if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty() && username.isNotEmpty()) {
                 if (pass == confirmPass) {
                     firebaseAuth.createUserWithEmailAndPassword(email, pass)
-                            .addOnCompleteListener { authTask ->
-                                if (authTask.isSuccessful) {
-                                    val userId = firebaseAuth.currentUser?.uid ?: ""
-                                    val initialBalance = 10_000_000
-                                    val accountNumber = generateAccountNumber()
+                        .addOnCompleteListener { authTask ->
+                            if (authTask.isSuccessful) {
+                                val userId = firebaseAuth.currentUser?.uid ?: ""
+                                val initialBalance = 10_000_000
+                                val accountNumber = generateAccountNumber()
 
-                                    updateUserData(userId, username, initialBalance, accountNumber)
-                                    val intent = Intent(this, SignInActivity::class.java)
-                                    startActivity(intent)
-                                } else {
-                                    Toast.makeText(this, authTask.exception.toString(), Toast.LENGTH_SHORT).show()
-                                }
+                                updateUserData(userId, username, initialBalance, accountNumber)
+                                val intent = Intent(this, SignInActivity::class.java)
+                                startActivity(intent)
+                            } else {
+                                Toast.makeText(this, authTask.exception.toString(), Toast.LENGTH_SHORT).show()
                             }
+                        }
                 } else {
                     Toast.makeText(this, "Password is not matching", Toast.LENGTH_SHORT).show()
                 }
@@ -64,20 +64,20 @@ class SignUpActivity : AppCompatActivity() {
         val userDocRef = firestore.collection("users").document(uid)
 
         val userData = hashMapOf(
-                "username" to username,
-                "balance" to balance,
-                "account_number" to accountNumber
+            "username" to username,
+            "balance" to balance,
+            "account_number" to accountNumber
 
         )
 
         userDocRef.set(userData)
-                .addOnSuccessListener {
+            .addOnSuccessListener {
 
-                }
-                .addOnFailureListener { e ->
+            }
+            .addOnFailureListener { e ->
 
-                    Toast.makeText(this, "Error updating user data: ${e.message}", Toast.LENGTH_SHORT).show()
-                }
+                Toast.makeText(this, "Error updating user data: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
     }
 
     private fun generateAccountNumber(): Long {
