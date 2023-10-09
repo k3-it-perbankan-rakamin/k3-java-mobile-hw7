@@ -43,5 +43,14 @@
         <item name="android:fontFamily">@font/montserrat_bold</item>
     </style>
 
-    <style name="Theme.MyRakamin" parent="Base.Theme.MyRakamin"/>
+    <style name="Theme.MyRakamin" parent="Base.Theme.MyRakamin" />
+
+    <style name="Theme.MyRakamin.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MyRakamin.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyRakamin.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
