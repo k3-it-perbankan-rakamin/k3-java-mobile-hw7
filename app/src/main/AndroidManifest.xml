@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MyRakamin"
         tools:targetApi="31">
         <activity
-            android:name=".SignInActivity"
+            android:name=".CekSaldoActivity"
             android:exported="true"
             android:theme="@style/Theme.MyRakamin.NoActionBar">
             <intent-filter>
@@ -29,7 +29,7 @@
             android:name=".MainActivity"
             android:exported="true" />
 
-        <activity android:name=".CekSaldoActivity"
+        <activity android:name=".SignInActivity"
             android:exported="false" />
 
         <activity

@@ -4,11 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -18,6 +20,7 @@ class CekSaldoActivity : AppCompatActivity() {
 
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var imgbutton: ImageButton
 
     private lateinit var username : TextView
     private lateinit var balance : TextView
@@ -78,11 +81,24 @@ class CekSaldoActivity : AppCompatActivity() {
             }
             false
         }
+        imgbutton = findViewById(R.id.imageButton2)
+        var balnce = findViewById<TextView>(R.id.balanceMain)
+        balnce.visibility = View.GONE
+        imgbutton.setOnClickListener{
+
+               if (balnce.visibility == View.GONE){
+                   balnce.visibility = View.VISIBLE
+                   imgbutton.setImageResource(R.drawable.view)
+               }else{
+                   balnce.visibility = View.GONE
+                   imgbutton.setImageResource(R.drawable.hidden)
+               }
+        }
     }
 
     private fun getUser() {
-        val uid = firebaseAuth.currentUser!!.uid
 
+        val uid = firebaseAuth.currentUser!!.uid
         val ref = firestore.collection("users").document(uid)
         ref.get().addOnSuccessListener { document ->
             if (document.exists()) {
