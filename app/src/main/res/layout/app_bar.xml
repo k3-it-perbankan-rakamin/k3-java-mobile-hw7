@@ -26,7 +26,7 @@
                 android:src="@drawable/rakamin"
                 tools:srcCompat="@drawable/rakamin" />
 
-            <Space
+            <View
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
@@ -42,6 +42,5 @@
         </LinearLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
-    <include layout="@layout/content_cek_saldo"
-        />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

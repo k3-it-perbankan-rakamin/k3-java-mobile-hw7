@@ -10,10 +10,13 @@
         android:layout_gravity="end"
         >
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_editprofile"
             android:title="@string/edit_profile" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_logout"
             android:title="@string/logout" />
     </group>
 </menu>
