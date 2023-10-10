@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextUsernameLayout"
+        style="@style/LoginTextInputOuterFieldStyle"
+        android:layout_width="370dp"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="350dp"
+        app:boxStrokeColor="@color/rakamin_color"
+        app:hintTextColor="@color/rakamin_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextUsername"
+            style="@style/LoginTextInputInnerFieldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:hint="Silakan masukan username baru Anda di sini"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="413dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="748dp"
+        android:background="@color/rakamin_color"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="409dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Edit Profile"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="389dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="1dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Profile Information"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="333dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="57dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Update your account's profile information"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="100dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="326dp"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Username"
+        android:textColor="#585858"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/TextUsernameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="63dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="326dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Email"
+        android:textColor="#585858"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextUsernameLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextEmailLayout"
+        style="@style/LoginTextInputOuterFieldStyle"
+        android:layout_width="370dp"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="452dp"
+        app:boxStrokeColor="@color/rakamin_color"
+        app:hintTextColor="@color/rakamin_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmail"
+            style="@style/LoginTextInputInnerFieldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:hint="Silakan masukan E-mail Anda di sini"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="68dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="326dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="No. Telp"
+        android:textColor="#585858"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextEmailLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextPhoneLayout"
+        style="@style/LoginTextInputOuterFieldStyle"
+        android:layout_width="370dp"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="556dp"
+        app:boxStrokeColor="@color/rakamin_color"
+        app:hintTextColor="@color/rakamin_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPhone"
+            style="@style/LoginTextInputInnerFieldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:hint="Silakan masukan No. Telp Anda di sini"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="65dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="326dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Alamat KTP"
+        android:textColor="#585858"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextPhoneLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextAddresLayout"
+        style="@style/LoginTextInputOuterFieldStyle"
+        android:layout_width="370dp"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="656dp"
+        app:boxStrokeColor="@color/rakamin_color"
+        app:hintTextColor="@color/rakamin_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextAddress"
+            style="@style/LoginTextInputInnerFieldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:hint="Silakan masukan Alamat KTP Anda di sini"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveButton"
+        android:layout_width="365dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="84dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Simpan"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

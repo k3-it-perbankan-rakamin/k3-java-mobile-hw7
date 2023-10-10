@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CekSaldoActivity"
+    tools:context=".EditProfileActivity"
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -20,15 +20,26 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="188dp"
-                android:layout_height="82dp"
+                android:layout_width="126dp"
+                android:layout_height="match_parent"
                 android:contentDescription="Rakamin Icon"
                 android:src="@drawable/rakamin"
                 tools:srcCompat="@drawable/rakamin" />
 
             <Space
+                android:layout_width="159dp"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/iconhome" />
+
+            <Space
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="39dp"
                 android:layout_weight="1" />
 
             <androidx.appcompat.widget.Toolbar
@@ -37,11 +48,27 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/Theme.MyRakamin.PopupOverlay"
                 app:theme="@style/Base.Theme.MyRakamin"
-                app:popupTheme="@style/Theme.MyRakamin.PopupOverlay" />
+
+
+                />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="53dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/icontool" />
+
+            <Space
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
         </LinearLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
-    <include layout="@layout/content_cek_saldo"
+    <include layout="@layout/editaja"
         />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

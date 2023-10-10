@@ -31,7 +31,7 @@ class EditProfileActivity : AppCompatActivity() {
         editTextPhone = findViewById(R.id.editTextPhone)
         editTextAddress = findViewById(R.id.editTextAddress)
         saveButton = findViewById(R.id.saveButton)
-        logoutButton = findViewById(R.id.logoutButton)
+//        logoutButton = findViewById(R.id.logoutButton)
 
         firebaseAuth = FirebaseAuth.getInstance()
         firestore = FirebaseFirestore.getInstance()
@@ -109,5 +109,5 @@ class EditProfileActivity : AppCompatActivity() {
                         Toast.makeText(this, "Error updating user data: ${e.message}", Toast.LENGTH_SHORT).show()
                     }
         }
-    }
+   }
 }
