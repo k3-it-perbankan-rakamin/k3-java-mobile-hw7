@@ -3,16 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/signInActivity">
-
+    app:startDestination="@id/cekSaldoActivity">
+    <activity
+        android:id="@+id/cekSaldoActivity"
+        android:name="com.example.myrakamin.CekSaldoActivity"
+        android:label="activity_cek_saldo"
+        tools:layout="@layout/activity_cek_saldo" />
+    <activity
+        android:id="@+id/editProfileActivity"
+        android:name="com.example.myrakamin.EditProfileActivity"
+        android:label="activity_edit_profile"
+        tools:layout="@layout/activity_edit_profile" />
     <activity
         android:id="@+id/signInActivity"
         android:name="com.example.myrakamin.SignInActivity"
         android:label="activity_sign_in"
         tools:layout="@layout/activity_sign_in" />
-    <activity
-        android:id="@+id/signUpActivity"
-        android:name="com.example.myrakamin.SignUpActivity"
-        android:label="activity_sign_up"
-        tools:layout="@layout/activity_sign_up" />
 </navigation>
