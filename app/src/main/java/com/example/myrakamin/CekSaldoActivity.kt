@@ -4,20 +4,39 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class CekSaldoActivity : AppCompatActivity() {
 
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
+
+    private lateinit var username : TextView
+    private lateinit var balance : TextView
+    private lateinit var noAccount : TextView
+
+    private  var firebaseAuth = FirebaseAuth.getInstance()
+    private  var firestore = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cek_saldo)
+
+        username= findViewById(R.id.usernameMain)
+        balance= findViewById(R.id.balanceMain)
+        noAccount= findViewById(R.id.noAccountMain)
+
+        getUser()
+
         val toolbar: Toolbar = findViewById(R.id.toolbar_main)
         drawer = findViewById(R.id.ceksaldo_drawer)
         toggle = ActionBarDrawerToggle(
@@ -58,6 +77,28 @@ class CekSaldoActivity : AppCompatActivity() {
                 }
             }
             false
+        }
+    }
+
+    private fun getUser() {
+        val uid = firebaseAuth.currentUser!!.uid
+
+        val ref = firestore.collection("users").document(uid)
+        ref.get().addOnSuccessListener { document ->
+            if (document.exists()) {
+                val getUsername = document.data?.get("username")?.toString()
+                val getBalance = document.data?.get("balance")?.toString()
+                val getNoAccount = document.data?.get("account_number").toString()
+                username.text= getUsername
+                balance.text= getBalance
+                noAccount.text = getNoAccount
+            } else {
+                Toast.makeText(this, "Not Found", Toast.LENGTH_SHORT).show()
+            }
+        }.addOnFailureListener { exception ->
+            Toast.makeText(
+                this, "Failed Retrieve Data User : $exception", Toast.LENGTH_SHORT
+            ).show()
         }
     }
 }

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "240577962081",
-    "project_id": "rakamin-hw7",
-    "storage_bucket": "rakamin-hw7.appspot.com"
+    "project_number": "423938439762",
+    "project_id": "myrakamin-74636",
+    "storage_bucket": "myrakamin-74636.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:240577962081:android:2c66de59296ebbc718ca20",
+        "mobilesdk_app_id": "1:423938439762:android:3c71afa7537badb38dfd8b",
         "android_client_info": {
           "package_name": "com.example.myrakamin"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDyQYS68Tni-d5SIji3I0cbhDGVTu7XQm8"
+          "current_key": "AIzaSyAH6D0a4c6Wqe-NYDT0aEz0NCxWo4Rzu_4"
         }
       ],
       "services": {

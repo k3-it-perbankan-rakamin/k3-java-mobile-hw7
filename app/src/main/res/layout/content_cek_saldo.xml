@@ -93,7 +93,7 @@
                 android:visibility="visible">
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/usernameMain"
                     android:layout_width="167dp"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/montserrat_bold"
@@ -109,7 +109,7 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/noAccountMain"
                     android:layout_width="121dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -155,7 +155,7 @@
                 android:visibility="visible">
 
                 <TextView
-                    android:id="@+id/textView14"
+                    android:id="@+id/balanceMain"
                     android:layout_width="264dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
