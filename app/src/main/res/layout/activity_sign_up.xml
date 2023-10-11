@@ -7,13 +7,56 @@
     android:background="@drawable/signup_screen"
     tools:context=".SignUpActivity">
 
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="132dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="143dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_rakamin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="131dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/logoImageView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Rakamin Perbankan"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/usernameLayout"
         style="@style/LoginTextInputOuterFieldStyle"
         android:layout_width="325dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="380dp"
         app:boxStrokeColor="@color/rakamin_color"
         app:hintTextColor="@color/rakamin_color"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +79,7 @@
         android:layout_width="325dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         app:boxStrokeColor="@color/rakamin_color"
         app:hintTextColor="@color/rakamin_color"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +102,7 @@
         android:layout_width="325dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         app:boxStrokeColor="@color/rakamin_color"
         app:hintTextColor="@color/rakamin_color"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +126,7 @@
         android:layout_width="325dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         app:boxStrokeColor="@color/rakamin_color"
         app:hintTextColor="@color/rakamin_color"
         app:layout_constraintEnd_toEndOf="parent"
@@ -140,4 +183,79 @@
             android:textColor="@color/dark_blue"
             android:textStyle="bold"/>/>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Username"
+        app:layout_constraintBottom_toTopOf="@+id/usernameLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="88dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Masukan Informasi Dibawah Berikut"
+        app:layout_constraintBottom_toTopOf="@+id/usernameLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Isi data diri anda seperti email, username, dan password."
+        app:layout_constraintBottom_toTopOf="@+id/usernameLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Email"
+        app:layout_constraintBottom_toTopOf="@+id/emailLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameLayout"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Password"
+        app:layout_constraintBottom_toTopOf="@+id/passwordLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailLayout"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Konfirmasi Password"
+        app:layout_constraintBottom_toTopOf="@+id/confirmPasswordLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLayout"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
