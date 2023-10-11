@@ -18,8 +18,8 @@ class SignInActivity : AppCompatActivity() {
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         firebaseAuth = FirebaseAuth.getInstance()
+
         binding.registerLink.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
@@ -30,22 +30,31 @@ class SignInActivity : AppCompatActivity() {
             val pass = binding.passET.text.toString()
 
             if (email.isNotEmpty() && pass.isNotEmpty()) {
-
-                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
-                    if (it.isSuccessful) {
+                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
                         val intent = Intent(this, CekSaldoActivity::class.java)
                         startActivity(intent)
                     } else {
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-
+                        val exception = task.exception
+                        when {
+                            exception?.message?.contains("password") == true -> {
+                                Toast.makeText(this, "Wrong password", Toast.LENGTH_SHORT).show()
+                            }
+                            exception?.message?.contains("user record") == true -> {
+                                Toast.makeText(this, "User not registered", Toast.LENGTH_SHORT).show()
+                            }
+                            else -> {
+                                Toast.makeText(this, "Authentication failed: ${exception?.message}", Toast.LENGTH_SHORT).show()
+                            }
+                        }
                     }
                 }
             } else {
                 Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
-
             }
         }
     }
+}
 
 //    override fun onStart() {
 //        super.onStart()
@@ -55,4 +64,3 @@ class SignInActivity : AppCompatActivity() {
 //            startActivity(intent)
 //        }
 //    }
-}

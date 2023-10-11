@@ -43,9 +43,9 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.core:core:1.10.1")
     //noinspection GradleCompatible
-    implementation("com.android.support:design:28.0.0")
+    implementation("com.google.android.material:material:1.0.0")
     //noinspection GradleCompatible
-    implementation("com.android.support:support-v4:28.0.0")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.0.0")
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
     implementation("com.google.firebase:firebase-auth-ktx:22.1.2")

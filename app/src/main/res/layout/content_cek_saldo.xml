@@ -154,24 +154,39 @@
                 android:orientation="horizontal"
                 android:visibility="visible">
 
-                <TextView
-                    android:id="@+id/balanceMain"
-                    android:layout_width="264dp"
-                    android:layout_height="48dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Rp123.456.789"
-                    android:textSize="30sp" />
+                <LinearLayout
+                    android:layout_width="244dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/imageButton2"
-                    android:layout_width="65dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="50dp"
+                    <TextView
+                        android:id="@+id/balanceMain"
+                        android:layout_width="264dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Rp123.456.789"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
-                    android:contentDescription="Hide / Open Saldo"
-                    app:srcCompat="@mipmap/eye" />
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="77dp"
+                        android:layout_height="47dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="50dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:contentDescription="Hide / Open Saldo"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/hidden" />
+                </LinearLayout>
 
             </LinearLayout>
 
